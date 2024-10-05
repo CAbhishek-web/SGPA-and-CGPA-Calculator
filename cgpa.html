@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="cgpa.css">
+    <script src="cgpa_script.js" defer></script>
+</head>
+<body>
+
+    <h1>CGPA Calculator</h1>
+
+    <div class="container">
+        <h2>Select the number of semesters:</h2>
+        <select id="semesterCount" onchange="generateSemesterFields()">
+            <option value="" disabled selected>Select number of semesters</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        
+        <div id="semesterContainer"></div>
+
+        <button id="submitBtn" style="display: none;" onclick="calculateCGPA()">Submit</button>
+    </div>
+
+    <!-- The Modal for showing CGPA -->
+    <div id="cgpaModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="cgpaPopupResult"></p>
+        </div>
+    </div>
+
+</body>
+</html>

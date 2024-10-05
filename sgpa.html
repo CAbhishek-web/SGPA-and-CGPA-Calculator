@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <link rel="stylesheet" href="sgpa.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>SGPA Calculator</h1>
+
+    <div class="container">
+        <h2>Select the number of subjects:</h2>
+        <select id="subjectCount" onchange="generateSubjectFields()">
+            <option value="" disabled selected>Select number of subjects</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+
+        <div id="subjectContainer"></div>
+
+        <button id="submitBtn" style="display: none;" onclick="calculateSGPA()">Submit</button>
+    </div>
+
+    <!-- The Modal for showing SGPA -->
+    <div id="sgpaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="sgpaPopupResult"></p>
+        </div>
+    </div>
+
+</body>
+</html>

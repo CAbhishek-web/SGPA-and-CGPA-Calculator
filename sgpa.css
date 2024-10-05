@@ -1,0 +1,169 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ff7e5f;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff7e5f;
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #feb47b; /* Change border color on focus */
+}
+
+/* Styles for subject input fields */
+.subject-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+/* Style for the select dropdown */
+#subjectCount {
+    padding: 10px;                /* Add padding for better touch target */
+    border-radius: 5px;          /* Rounded corners */
+    border: 1px solid #ff7e5f;   /* Border color */
+    font-size: 1em;              /* Font size */
+    margin-bottom: 20px;         /* Space below the select box */
+    width: 100%;                 /* Full width of the parent container */
+    max-width: 250px;            /* Max width to maintain layout */
+    transition: border-color 0.3s ease; /* Transition for border color */
+}
+
+/* Change border color on focus */
+#subjectCount:focus {
+    outline: none;               /* Remove default outline */
+    border-color: #feb47b;      /* Change border color on focus */
+}
+
+.grade-input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 220px;
+}
+
+select {
+    padding: 5px; /* Smaller padding */
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px; /* Reduced width */
+}
+
+/* Button Styles */
+button {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #feb47b; /* Lighter background on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    select {
+        font-size: 0.9em;
+    }
+}
